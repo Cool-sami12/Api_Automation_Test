@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "c49395c1-af8d-4179-8bc4-ade5752f107d",
+		"name": "Api_AutoTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EMPLOYEE",
+			"item": [
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Create_Employee",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fa4f3805-f5fb-4c01-a82c-45387a0827d5",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Employee_Test}}api/v1/create",
+									"host": [
+										"{{Employee_Test}}api"
+									],
+									"path": [
+										"v1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Update_Employee",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b96e6520-d241-40dc-81f1-f13b9fc872d3",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{Employee_Test}}api/v1/update/21",
+									"host": [
+										"{{Employee_Test}}api"
+									],
+									"path": [
+										"v1",
+										"update",
+										"21"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Get Employee",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4dd443a1-38c5-4fe0-be65-e527123da447",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Employee_Test}}api/v1/employees",
+									"host": [
+										"{{Employee_Test}}api"
+									],
+									"path": [
+										"v1",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a single Employee",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "917701e0-3254-423c-b3b8-7d14b8d29011",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Employee_Test}}api/v1/employee/1",
+									"host": [
+										"{{Employee_Test}}api"
+									],
+									"path": [
+										"v1",
+										"employee",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "DEL",
+					"item": [
+						{
+							"name": "Delete Employee",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Employee_Test}}api/v1/delete/6430",
+									"host": [
+										"{{Employee_Test}}api"
+									],
+									"path": [
+										"v1",
+										"delete",
+										"6430"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "{{Base_Url}}api/users/2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0a8fe619-0109-4c27-8933-0a2af41cb2a5",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Base_Url}}api/users/2",
+									"host": [
+										"{{Base_Url}}api"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Base_Url}}api/users?page=2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "61f04263-3a1e-4e82-9bcb-09925607a029",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Base_Url}}api/users?page=2",
+									"host": [
+										"{{Base_Url}}api"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "{{Base_Url}}api/login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "eb43b8a2-daf3-4a8f-8a72-bee69a841565",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});\r",
+											"responseJson = JSON.parse(responseBody);\r",
+											"console.log(responseJson.list);\r",
+											"pm.test(\"Token is been returned\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n\t\"password\": \"cityslicka\"\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base_Url}}api/login",
+									"host": [
+										"{{Base_Url}}api"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{Base_Url}}api/users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8c0aee40-78fe-4b38-ae40-103e0f754115",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"Created\");\r",
+											"});\r",
+											"pm.test(\"Successful Record has been added.\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base_Url}}api/users",
+									"host": [
+										"{{Base_Url}}api"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "{{Base_Url}}api/users/2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n\t\"password\": \"cityslicka\"\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base_Url}}api/users/2",
+									"host": [
+										"{{Base_Url}}api"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Update",
+					"item": [],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
