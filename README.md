@@ -1,0 +1,1 @@
+# sami-api-automationtest
